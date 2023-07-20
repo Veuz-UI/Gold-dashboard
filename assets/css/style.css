@@ -248,10 +248,18 @@ li{
     transition: .5s;
 }
 
+.user-drodwn{
+    display: none;
+}
+
 .left-bar .navbar ul li a:hover{
     background-color: var(--bg-color);
     color: var(--active-color);
     transition: .5s;
+}
+
+.ticker-nav{
+    display: none;
 }
 
 .left-bar .navbar ul li a:hover svg path{
@@ -1661,5 +1669,258 @@ li{
     }
     .logintable-topleft .tbl-search span {
         left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-bar{
+        width: 100%;
+        top: 0px;
+        z-index: 100;
+        height: 80px;
+        padding: 10px 0px;
+        display: flex;
+        flex-direction: row;
+    }
+    .logo{
+        width: auto;
+        position: fixed;
+        top: 10px;
+        left: 15px;
+    }
+    .logo img {
+        width: 80px;
+    }
+    .left-bar .navbar {
+        margin-top: 0px;
+    }
+    .left-bar .bottom-img, .right-bar{
+        display: none;
+    }
+    .navbar .container-fluid{
+        justify-content: end;
+    }
+    .navbar-toggler-icon{
+        margin-top: 5px;
+        width: 30px;
+    }
+    .main-content {
+        width: 100%;
+        left: 0px;
+        top: 75px;
+    }
+    .top-head {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    .get-app{
+        border-radius: 5px;
+    }
+    .get-app-first h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    .total-online h4 {
+        width: 130px;
+    }
+    .get-app .get-app-first {
+        padding: 20px;
+    }
+    .get-app-second .dropzone{
+        margin-bottom: 20px;
+    }
+    .tbl-top-right{
+        flex-direction: column;
+    }
+    .tbl-btns{
+        margin-left: 0px !important;
+        margin-top: 10px;
+    }
+    .table-select{
+         flex-direction: column;
+    }
+    .table-select .form-control{
+        width: 100%;
+    }
+    .table-select .d-flex{
+        flex-direction: column;
+    }
+    .tbl-div .table {
+        width: 410%;
+    }
+    .bottom-btns .tbl-btns {
+        padding: 0px 15px 10px 0px;
+    }
+    .navbar-toggler{
+        border: 0px;
+        padding-right: 80px;
+        outline: none;
+    }
+    .navbar-toggler:focus{
+        box-shadow: none;
+    }
+    .navbar-collapse{
+        background-color: white;
+        margin-top: 25px;
+    }
+    .left-bar .navbar ul li a {
+        padding: 15px 25px;
+    }
+    .sub-tbl .table {
+        width: 270%;
+    }
+    .rpanel-table{
+        padding: 0px 0px 30px;
+        border-radius: 5px;
+    }
+    .rpanel-table .table-bottom {
+        padding: 25px 15px 0px;
+    }
+    .rpanel-tbl{
+        overflow-x: auto;
+    }
+    .rpanel-tbl table{
+        width: 150%;
+    }
+    .rpanel-table .table tr:first-child th:first-child {
+        border-top-left-radius: 5px;
+    }
+    .rpanel-table .table tr:first-child th:last-child {
+        border-top-right-radius: 5px;
+    }
+    .news {
+        padding: 15px 10px;
+    }
+    .news-form h3 {
+        margin-bottom: 20px;
+    }
+    .news-form form {
+        margin-top: 10px;
+    }
+    .news-form .form-group {
+        margin-bottom: 5px;
+    }
+    .news-table .table {
+        width: 400%;
+    }
+    .table-select .rows .form-control {
+        min-width: 120px;
+        width: 120px;
+    }
+    .notification-div {
+        padding: 25px 20px;
+    }
+    .push-notification .title-topbar{
+        align-items: flex-start;
+        margin-bottom: 25px;
+        flex-direction: column;
+    }
+    .push-notification .title-topbar h3 {
+        margin-bottom: 15px;
+    }
+    .checkbox-animate{
+        margin-bottom: 10px;
+    }
+    .news-form .btn {
+        margin-top: 5px;
+    }
+    .settings-tabs .tab {
+        margin: 0px 0px 15px;
+        flex-direction: column;
+        background: transparent;
+    }
+    .settings-tabs .tab .tablinks{
+        background: #ffffff;
+        margin: 0px;
+        margin-bottom: 8px;
+    }
+    .settings-tabs .tab .tablinks.active {
+        background-color: #CEE6FD;
+        border-bottom: 0px solid #5138ED;
+    }
+    .logintable-dates{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logintable-date label{
+        min-width: 100px;
+    }
+    .logintable-date{
+        margin-top: 8px;
+    }
+    .settings-tabs .push-notification .title-topbar h3{
+        margin-bottom: 0px;
+    }
+    .login-table{
+        overflow-x: auto;
+    }
+    .login-table .table{
+        width: 180%;
+    }
+    .ticker-bar{
+        width: 100%;
+        padding: 18px;
+        margin-top: 80px;
+    }
+    .ticker-bar .right-bar{
+        display: block !important;
+        width: 100%;
+        height: auto;
+        position: initial;
+    }
+    .ticker-nav{
+        display: block;
+    }
+    .news, .notification-div, .ticker-bar .right-bar, .settings-tabs .tab .tablinks, .login-tbl{
+        border-radius: 5px;
+    }
+    .user-drodwn{
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 5px;
+    }
+    .user-drodwn .btn-secondary{
+        background: transparent;
+        border: 0px;
+        padding: 0px 15px 0px 0px;
+    }
+    .user-drodwn .btn-secondary img{
+        width: 50px;
+    }
+    .user-drodwn .btn.show:focus, .user-drodwn .btn:active:focus{
+        box-shadow: none !important;
+    }
+    .user-drodwn .dropdown-menu[data-bs-popper]{
+        right: 10px;
+        left: auto;
+    }
+    .user-drodwn .dropdown-item{
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .user-drodwn .dropdown-menu{
+        padding: 10px 0px;
+    }
+    .user-drodwn .dropdown-menu.show{
+        top: 120% !important;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .total-online h4 {
+        width: 95px;
+        font-size: 18px;
+    }
+    .tbl-btns .btn {
+        padding: 0.4rem 8px;
+        font-size: 12px;
+    }
+    .bottom-btns .tbl-btns {
+        padding: 0px 8px 10px 0px;
     }
 }
