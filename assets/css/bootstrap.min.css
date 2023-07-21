@@ -3648,8 +3648,8 @@ textarea.form-control.is-invalid {
 .btn.show,
 .btn:active {
     color: var(--bs-btn-active-color);
-    background-color: var(--bs-btn-active-bg);
-    border-color: var(--bs-btn-active-border-color)
+    background-color: #6f5fca;
+    border-color: #6f5fca
 }
 
 .btn-check:active+.btn:focus,

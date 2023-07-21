@@ -117,7 +117,8 @@
                          <i class="mdi mdi-chevron-down"></i>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Change Password</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#profile-edits">Profile</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#change-password">Change Password</a>
                         <a class="dropdown-item" href="#">Logout</a>
                     </div>
                 </div>
@@ -322,9 +323,16 @@
                         </div>
     
                     </div>
+                    <div class="profile-edits">
+                       <a href="#" data-bs-toggle="modal" data-bs-target="#profile-edits"> <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 1.25122H8C3 1.25122 1 3.25122 1 8.25122V14.2512C1 19.2512 3 21.2512 8 21.2512H14C19 21.2512 21 19.2512 21 14.2512V12.2512" stroke="#94949E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.04 2.27123L7.16 10.1512C6.86 10.4512 6.56 11.0412 6.5 11.4712L6.07 14.4812C5.91 15.5712 6.68 16.3312 7.77 16.1812L10.78 15.7512C11.2 15.6912 11.79 15.3912 12.1 15.0912L19.98 7.21123C21.34 5.85123 21.98 4.27123 19.98 2.27123C17.98 0.271229 16.4 0.911229 15.04 2.27123Z" stroke="#94949E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13.91 3.40112C14.2416 4.57859 14.87 5.65119 15.735 6.51617C16.5999 7.38115 17.6725 8.00953 18.85 8.34112" stroke="#94949E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> </a>
+                    </div>
                 </div>
                 <ul>
-                    <li><a href="#">Change Password</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#change-password">Change Password</a></li>
                     <li><a href="#">Logout</a></li>
                 </ul>
             </div>
@@ -371,6 +379,83 @@
     </div>
 
 
+    <!-- The Modal -->
+<div class="modal" id="change-password">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-md-12">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                  <div class="change-password">
+                      <div class="pass-icn">
+                          <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M10.02 18.5H6.5C5.88 18.5 5.33 18.48 4.84 18.41C2.21 18.12 1.5 16.88 1.5 13.5V8.5C1.5 5.12 2.21 3.88 4.84 3.59C5.33 3.52 5.88 3.5 6.5 3.5H9.96M14.02 3.5H15.5C16.12 3.5 16.67 3.52 17.16 3.59C19.79 3.88 20.5 5.12 20.5 8.5V13.5C20.5 16.88 19.79 18.12 17.16 18.41C16.67 18.48 16.12 18.5 15.5 18.5H14.02M14 1V21" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M10.095 11H10.103M6.09399 11H6.10399" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>  
+                      </div>
+                      <h3>Set new password</h3>
+                      <p>Must be at least 8 characters.</p>
+                      <div class="form-group">
+                          <label for="old-password">Current Password</label>
+                          <input type="password" id="old-password" name="old-password" placeholder="Current Password" class="form-control">
+                          <span toggle="#old-password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="new-password">New Password</label>
+                          <input type="password" id="new-password" name="new-password" placeholder="New Password" class="form-control">
+                          <span toggle="#new-password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                      </div>
+                      <div class="form-group">
+                          <label for="confirm-password">Confirm Password</label>
+                          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" class="form-control">
+                          <span toggle="#confirm-password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                      </div>
+                      <button type="button" class="btn btn-primary w-100 mt-2">Reset password</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="profile-edits">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <div class="change-password">
+                          <div class="profile-picture">
+                              <div class="circle">
+                                  <img class="profile-pic"
+                                      src="assets/images/users/user.png">
+                                      <div class="p-image">
+                                          <i class="fa fa-camera upload-button"></i>
+                                          <input class="file-upload" type="file" accept="image/*" />
+                                      </div>
+                              </div>
+                              
+                          </div>
+                          <h3>Change Profile</h3>
+                          <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" value="Dome james" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label for="new-password">Organization</label>
+                            <input type="text" id="new-password" name="new-password" value="Organization" class="form-control">
+                          </div>
+                          <button type="button" class="btn btn-primary w-100 mt-2">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
     <script src="assets/js/jquery/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/dropzone/dropzone.min.js"></script>
@@ -381,6 +466,39 @@
             }, 500)
 
         })
+
+        // password visibility
+
+        $(".toggle-password").click(function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+input.attr("type", "text");
+} else {
+input.attr("type", "password");
+}
+});
+
+// change profile pic
+
+$(document).ready(function() {
+var readURL = function(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function (e) {
+$('.profile-pic').attr('src', e.target.result);
+}
+reader.readAsDataURL(input.files[0]);
+}
+}
+$(".file-upload").on('change', function(){
+readURL(this);
+});
+$(".upload-button").on('click', function() {
+$(".file-upload").click();
+});
+});
     </script>
 </body>
 

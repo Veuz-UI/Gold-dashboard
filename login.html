@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabets</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awsome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="loader" id="loading">
+        <div class="spinner"></div>
+    </div>
+    <section class="login-page">
+        <div class="container px-0">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="login-left-div">
+                        <img src="assets/images/login.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="login-right-div">
+                        <div class="login-form">
+                            <h2>Welcome Back</h2>
+                            <p>Welcome Back! please enter your details.</p>
+    
+                            <div class="login-inputs">
+                                <input type="text" id="email" name="email" placeholder="Enter your email" class="form-control">
+                                <input type="text" id="password" name="password" placeholder="Enter your password" class="form-control">
+                                <button type="button" class="btn btn-primary w-100 mt-2">Submit</button>
+                            </div>
+                            
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/jquery/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(function() {
+            setTimeout(function() {
+                $("#loading").hide();
+            }, 500)
+
+        })
+
+    </script>
+    
+</body>
+
+</html>

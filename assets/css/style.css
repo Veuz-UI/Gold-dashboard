@@ -284,6 +284,18 @@ li{
 .user-div-top{
     padding: 20px 30px;
     display: flex;
+    position: relative;
+}
+
+.profile-edits{
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+
+.profile-edits svg{
+    width: 23px;
+    height: 23px;
 }
 
 .right-bar .user-details{
@@ -1305,6 +1317,205 @@ li{
     cursor: pointer;
 }
 
+/* login */
+
+.login-page{
+    height: 100vh;
+    background-color: rgb(139 121 243 / 1%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-left-div{
+    background-color: #8B79F3;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.login-left-div img{
+    width: 50%;
+}
+
+.login-right-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-family: 'Cairo', sans-serif;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.login-right-div h2{
+    color: #2B3674;
+    font-size: 35px;
+    font-weight: bold;
+}
+.login-right-div p{
+    font-size: 16px;
+    color: #94949E;
+    margin-bottom: 25px;
+}
+
+.login-right-div .login-form{
+    width: 60%;
+}
+
+.login-right-div .login-form .btn{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.login-right-div .form-control{
+    border: 1px solid #E6E3E3;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    background-color: white !important;
+}
+
+.login-right-div input::placeholder{
+    color: #827F7F;
+}
+
+.login-page .container{
+    border-radius: 15px;
+    box-shadow: 0px 0px 9px rgb(0 0 0 / 6%);
+    background-color: white;
+}
+
+
+/* modal */
+
+.modal{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal .btn-close{
+    float: right;
+}
+
+.change-password .pass-icn svg{
+    width: 22px;
+    height: 22px;
+}
+
+.change-password{
+    padding: 50px 20px;
+}
+
+.change-password .pass-icn{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.change-password h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 15px 0px 10px;
+}
+
+.change-password p{
+    text-align: center;
+    font-size: 14px;
+    color: #636669;
+    margin-bottom: 30px;
+}
+
+.change-password .form-group label{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#change-password .form-group{
+    position: relative;
+}
+
+.change-password .form-group .form-control{
+    border: 1px solid var(--border-color);
+    margin-bottom: 15px;
+}
+
+#change-password .form-group .form-control{
+    padding-right: 50px;
+}
+
+#change-password .form-group span{
+    position: absolute;
+    right: 15px;
+    bottom: 11px;
+    color: #cfcfcf;
+}
+
+#profile-edits .change-password h3{
+    margin: 15px 0px 30px;
+}
+
+.profile-picture{
+    position: relative;
+}
+
+.profile-picture .profile-pic {
+    width: 100px;
+    max-height: 100px;
+    display: inline-block;
+}
+
+.profile-picture .file-upload {
+    display: none;
+}
+.profile-picture .circle {
+    border-radius: 100% !important;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.profile-picture img {
+    max-width: 100%;
+    height: auto;
+}
+.profile-picture .p-image {
+    position: absolute;
+    bottom: 0px;
+    right: 40%;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0px 3px 3px rgb(0 0 0 / 8%);
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 30px;
+    color: #8b79f3;
+    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+    justify-content: center;
+    align-items: center;
+}
+.profile-picture .p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.profile-picture .upload-button {
+    font-size: 12px;
+}
+
+
+
+
 @media only screen and (max-width: 1600px){
     .left-bar{
         width: 230px;
@@ -1907,6 +2118,34 @@ li{
     }
     .user-drodwn .dropdown-menu.show{
         top: 120% !important;
+    }
+    .profile-picture .p-image{
+        right: 36%;
+    }
+    .login-page{
+        height: auto;
+    }
+    .login-page .container{
+        box-shadow:none;
+        border-radius: 0px;
+    }
+    .login-left-div, .login-right-div{
+        border-radius: 0px !important;
+    }
+    .login-left-div{
+        height: 50vh;
+    }
+    .login-right-div{
+        height: 50vh;
+    }
+    .login-right-div .login-form {
+        width: 80%;
+    }
+    .login-left-div img {
+        width: 55%;
+    }
+    .login-page{
+        background-color: white;
     }
 
 }
